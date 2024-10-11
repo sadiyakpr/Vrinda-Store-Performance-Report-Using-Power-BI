@@ -42,40 +42,34 @@ Using the dashboard the state of store is accessed, further factors to be improv
 
    (n) Amount
 
-   (o) Ship-city
+   (o) ship-city
 
-   (p) Ship-state
+   (p) ship-state
 
-   (q) Ship-postal code
+   (q) ship-postal code
 
-   (r) Ship-country
+   (r) ship-country
 
    (s) B2B
 
 - Step 2: Open power query editor & in view tab under Data preview section, select "column Quantity" and standardize the values for the column. Since, 1 and one, 2 and two are same.
   - Follow the same for "column Gender".
 - Step 3: Remove unecessary columns.
-  - Remove column ship-country since all the shipment were with one country, "India".
-  - Remove column currency since all the transactions were in indian rupees.
+  - Remove "column ship-country" since all the shipment were with one country, "India".
+  - Remove "column currency" since all the transactions were in indian rupees.
   
 - Step 4: Calculated column was created in which, customers were grouped into various age groups.
-  - For creating new column following DAX expression was written;
-                     
-        Age Group = 
-      
-        if(Vrinda Store[Age]>=50, "50-100 (100 included)",
+  - Teenager (>=18)
+  - Adult (>=30)
+  - Senior (>=50)
         
-        if(Vrinda Store[Age]>=30, "30-49 (49 included)",
-        
-        "18-29 (29 included)"))
-        
-- Step 5: It was observed that in none of the columns errors & empty values were present. 
-- Step 6: Change default column names to convinient and consize labels.
-- Step 7: Click "Close & Apply" ones all transformation are completed. Power BI does not make changed to original raw dataset.
-- Step 8: Create visualizations for the modelled dataset. This helps derive insights from the dataset. This is done on report view section on power BI.
-- Step 9: Give a one line summary on the top of the canvas using a text box. The report summary is "Vrinda Store Performance".
-  - Additionally a sub-title could also be added, for the report it is "2022".
-- Step 10: Produce visualizations for the following factors,
+- Step 5: It was observed that in none of the columns errors or empty values were present.
+- Step 6: Change default column names to convenient and consize labels.
+- Step 7: Click "Close & Apply" once all transformations are completed. Power BI does not make changes to the original raw dataset.
+- Step 8: Create visualisations for the modelled dataset. This helps derive insights from the dataset. This is done in the report view section on Power BI.
+- Step 9: Give a one line summary on the top of the canvas using a text box. The report summary is "Vrinda Store Performance."
+- Additionally, a sub-title could also be added; for the report, it is "2022."
+- Step 10: Produce visualisations for the following factors,
 
   (a) Total revenue store makes
 
@@ -161,7 +155,7 @@ Following inferences can be drawn from the dashboard,
 
  Ranking based on share in revenue. These ratings will change if different visual filters will be applied.
   
-  ### [4] Revenue share by Gender
+  ### [4] Revenue share by gender
   
   Rank 1: Women (64.05%)
 
@@ -199,7 +193,7 @@ Ranking based on share in revenue. These ratings will change if different visual
   
   Highest revenue making month: March 2022
 
-  -- Order Count
+  -- Order count
   
   Lowest order count making month: December 2022
   
