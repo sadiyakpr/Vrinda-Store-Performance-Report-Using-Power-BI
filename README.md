@@ -1,4 +1,8 @@
 # Vrinda-Store-Performance-Report-Using-Power-BI
+# What new have I implemented
+📌Interactive dashboard | 📌Column values standardization | 📌Filtering by month | 📌Real-time geographical map | 📌Filtering top 5 states by revenue share | 📌Customized line chart based on revenue and order count | 📌Secondary y-axis | 📌Doughnut charts representing revenue share by gender | 📌Doughnut charts representing top three channels contributing revenue.
+# A quick glimpse of the report
+![Screenshot 2024-10-11 055233](https://github.com/user-attachments/assets/b5f89d63-189b-46d0-a6bb-36a56a7dfe67)
 
 ### Dashboard PDF : 
 
@@ -6,9 +10,9 @@
 
 ## Problem Statement
 
-This dashboard helps better understand the performance of a clothing store. It allows the company to know its total revenue, states with the highest revenue share, and much more.
+This dynamic dashboard unlocks a deeper understanding of a clothing store's performance. With a clear view of total revenue and insights into which states contribute the most, it empowers the company to make informed decisions.
 
-Using the dashboard the state of the store is accessed, and further factors to be improved are discovered, not only to maintain the performance but also to boost its performance in areas it lags.
+By exploring the dashboard, you can easily assess the store’s current standing and uncover key areas for improvement. It’s not just about maintaining performance—this tool provides actionable insights to elevate underperforming aspects, ensuring that every part of the business thrives.
 
 ### Steps followed 
 
@@ -43,9 +47,9 @@ Using the dashboard the state of the store is accessed, and further factors to b
   - Remove "column currency" since all the transactions were in Indian rupees.
   
 - Step 4: Calculated column was created in which, customers were grouped into various age groups.
-  - Teenager (>=18)
-  - Adult (>=30)
-  - Senior (>=50)
+  The DAX query used is,
+
+      Age Group = IF(Table1[Age] >= 50, "Senior", IF(Table1[Age] >= 18, "Adult", "Teenager"))
         
 - Step 5: It was observed that in none of the columns errors or empty values were present.
 - Step 6: Change default column names to convenient and concise labels.
@@ -54,26 +58,18 @@ Using the dashboard the state of the store is accessed, and further factors to b
 - Step 9: Give a one-line summary on the top of the canvas using a text box. The report summary is "Vrinda Store Performance."
 - Additionally, a sub-title could be added, to the report, it is "2022."
 - Step 10: Produce visualizations for the following factors,
-
-  (a) Total revenue store makes
-
-  (b) Revenue by each month
-  
-  (c) Order count by each month
-
-  (d) Top 5 states generating maximum revenue
-
-  (e) Top 3 channels generating maximum revenue
-
-  (f) Gender-based revenue share
-
-  (g) Order count by age group
-
-  (h) Order count by gender
+  - Total revenue store makes
+  - Revenue by each month
+  - Order count by each month
+  - Top 5 states generating maximum revenue
+  - Top 3 channels generating maximum revenue
+  - Gender-based revenue share
+  - Order count by age group
+  - Order count by gender
 
 - Step 11: Visual filter (Slicer) were added for months.
 
-- Step 12: One card visuals was added to the canvas, representing the total revenue of the store.
+- Step 12: One card visuals was added to the canvas, representing the store's total revenue.
 
 Snap of card visuals,
 
@@ -84,8 +80,6 @@ Snap of card visuals,
 -- Top 3 channels that make up the highest share in revenue,
 
 ![Screenshot 2024-10-11 055834](https://github.com/user-attachments/assets/749dd7fb-8cf4-4659-897a-47fb74f60da6)
-
-
 
 -- Share in revenue by gender,
 
@@ -105,10 +99,6 @@ Snap of card visuals,
 
 ![Screenshot 2024-10-11 055357](https://github.com/user-attachments/assets/a09cb300-b612-46e7-b0e3-9d9b60771f07)
 
-# Report Snapshot (Power BI DESKTOP)
-
-![Screenshot 2024-10-11 055233](https://github.com/user-attachments/assets/b5f89d63-189b-46d0-a6bb-36a56a7dfe67)
-
 # Insights
 
 A single-page report was created on Power BI Desktop & it was then published to Power BI Service.
@@ -121,7 +111,7 @@ The following inferences can be drawn from the dashboard,
 
 ### [2] Top 5 states 
 
-     Rank 1: Maharashtra
+    Rank 1: Maharashtra
    
     Rank 2: Karnataka
    
