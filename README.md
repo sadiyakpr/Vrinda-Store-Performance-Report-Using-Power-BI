@@ -1,6 +1,6 @@
 # Vrinda-Store-Performance-Report-Using-Power-BI
 # What new have I implemented
-📌Interactive dashboard | 📌Column values standardization | 📌Filtering by month | 📌Real-time geographical map | 📌Filtering top 5 states by revenue share | 📌Customized line chart based on revenue and order count | 📌Secondary y-axis | 📌Doughnut charts representing revenue share by gender | 📌Doughnut charts representing top three channels contributing revenue.
+📌Interactive dashboard | 📌Column values standardization | 📌Nested DAX query | 📌DAX query using IF function |📌Filtering by month | 📌Real-time geographical map | 📌Filtering top 5 states by revenue share | 📌Customized line chart based on revenue and order count | 📌Secondary y-axis | 📌Doughnut charts representing revenue share by gender | 📌Doughnut charts representing top three channels contributing revenue.
 # A quick glimpse of the report
 ![Screenshot 2024-10-11 055233](https://github.com/user-attachments/assets/b5f89d63-189b-46d0-a6bb-36a56a7dfe67)
 
@@ -46,7 +46,7 @@ By exploring the dashboard, you can easily assess the store’s current standing
   - Remove "column ship-country" since all the shipments were with one country, "India".
   - Remove "column currency" since all the transactions were in Indian rupees.
   
-- Step 4: Calculated column was created in which, customers were grouped into various age groups.
+- Step 4: Calculated column " Age Group" was created in which, customers were grouped into various age groups.
   The DAX query used is,
 
       Age Group = IF(Table1[Age] >= 50, "Senior", IF(Table1[Age] >= 18, "Adult", "Teenager"))
